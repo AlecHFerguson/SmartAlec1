@@ -6,7 +6,6 @@ $(function() {
   var dispatcher = new WebSocketRails('localhost:3000/websocket');
 
   dispatcher.on_open = function(data) {
-    console.log('Connection has been established: ', data);
     dispatcher.trigger('subscribe_tweets');
   }
 
