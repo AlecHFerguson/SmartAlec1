@@ -13,4 +13,5 @@ $(function() {
   channel.bind('new_tweet', function(tweet) {
     $('#tweet-space').append(tweet.message);
   });
+  
 });

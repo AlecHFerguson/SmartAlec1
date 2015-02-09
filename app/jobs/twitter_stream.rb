@@ -17,5 +17,4 @@ class TwitterStream
     end
   end
 
-  
 end
