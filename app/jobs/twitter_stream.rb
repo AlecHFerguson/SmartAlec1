@@ -15,6 +15,15 @@ class TwitterStream
         WebsocketRails[:tweets].trigger(:new_tweet, { message: object.text + '<br>' })
       end
     end
-  end
 
+    all_tweets = []
+
+    client.filter(track: 'secret') do |tweet|
+      if tweet.kind_of? Twitter::Tweet
+        puts tweet.text
+        all_tweets.push tweet
+      end
+    end
+  end
+  
 end

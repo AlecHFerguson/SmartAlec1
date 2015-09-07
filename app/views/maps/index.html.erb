@@ -1,1 +1,9 @@
-<iframe class="mapspace" src="https://www.google.com/maps/embed/v1/place?q=United%20States&key=AIzaSyDk82uVXwUthyceAcVkpfyUbJ1655dm1-c"></iframe>
+
+
+<!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script> -->
+
+<div id="map-canvas"> </div>
+
+<% @extra_head_content ||= capture do %>
+  <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true' %>
+<% end %>
